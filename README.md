@@ -26,3 +26,12 @@ The program to be referred is:
 All calls to these functions are made from Companion Object, which is the entry point for Application.
 
 Please refer to the program header section for more details.
+
+
+Details Regarding the Reference Files:
+-------------------------------------
+1. Master_Location.txt - This file is used to get the IATA Station Name and its geocoding location details. Following is the format of the file
+STATION NUMBER, IATA STATION NAME, LATTITUDE, LONGITUDE, ELEVATION
+
+2. Weather_Condition.txt - This ref file is used to get the weather condition name based on the weather condition code. The format of the file is :
+Weather Condition Code, Weather Condition Name
