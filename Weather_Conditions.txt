@@ -1,0 +1,10 @@
+0,Cloudy
+1,Sunny
+2,Mixed
+3,Mostly Sunny
+4,Heavy Rain
+5,Drizzle
+6,Showers
+7,Rain
+8,Snow
+9,Partly Cloudy
