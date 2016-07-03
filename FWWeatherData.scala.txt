@@ -11,6 +11,7 @@ IATA STATAION NAME|LATITUDE,LONGITUDE,ELEVATION|DATETIME|WEATHERCONDITION|TEMPER
 Notes: IATA Station name will be in 3 letters, Temperature in Celcius and Pressure in HPA and Humidity in Percentage
        For information regarding the file format please refer to NATIONAL CLIMATIC DATA CENTRE 
 
+
 Input Parameters:-
     1. PARAMETER 1 : Input Directory whic contains files to be processed
     2. PARAMETER 2 : OUTPUT file name along with the path
