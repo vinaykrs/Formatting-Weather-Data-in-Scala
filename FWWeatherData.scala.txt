@@ -15,14 +15,15 @@ Notes: IATA Station name will be in 3 letters, Temperature in Celcius and Pressu
 Input Parameters:-
     1. PARAMETER 1 : Input Directory whic contains files to be processed
     2. PARAMETER 2 : OUTPUT file name along with the path
+    3. PARAMETER 3 : MASTER_LOCATION reference file with path
+    4. PARAMETER 4 : WEATHER_CONDITION.txt reference file with path
 
 
 Functions:-
 This program uses to functions defined in standalone OBJECT named LOOKUP
-   Function 1: conditionlkp :- This function takes STRING as input parameter and emits the type of weather condition
+   Function 1: conditionlkp :- This function takes weather condition code STRING and weather condition reference file as input                             parameters and emits the type of weather condition
                                Example:- RAINY, SUNNY etc... PLease refer file Weather_Condition.txt file
-   Function 2: stationlkp   :- This function takes STATION NUMBER as input parameter and emits its IATA and GEOCODE
-                               Informtion. Please refer file Master_Location.txt file for more information
+   Function 2: stationlkp   :- This function takes STATION NUMBER and Master Loaction reference file as input parameters and emits its                      IATA and GEOCODE Informtion. Please refer file Master_Location.txt file for more information
 
 ----------------------------------------------------------------------------
 ---------------------------------------------------------------------------
@@ -38,7 +39,7 @@ object FWWeatherData {
 def main(args: Array[String]) {
 // Checking wheather required parameters are passed
  if (args.length < 1) {
-      System.err.println("Invalid number of parameters, Required 2: 1. I/P DIR 2. OUTPUT file")
+      System.err.println("Invalid number of parameters, Required 4: 1. I/P DIR 2. OUTPUT file 3 and 4 for Reference Files")
       System.exit(1)
     }
 try
@@ -82,10 +83,10 @@ try
     val humidity = if (hum >= 99) 0 else hum
 
     //LOOKUP for weather Conditions from CONDITIONLKP function
-    val condition = conditionlkp(line.substring(63,64))
+    val condition = conditionlkp(line.substring(63,64), args(3))
 
     // Extracing Station Name and GECODE information using STATIONLKP function
-    val stat = stationlkp(station)
+    val stat = stationlkp(station, args(2))
     val geocode = Array(stat(1),stat(2),stat(3)).mkString(",")
 
     //Printing all data elements to a FILE 
