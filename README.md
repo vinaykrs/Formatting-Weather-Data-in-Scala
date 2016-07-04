@@ -35,3 +35,9 @@ STATION NUMBER, IATA STATION NAME, LATTITUDE, LONGITUDE, ELEVATION
 
 2. Weather_Condition.txt - This ref file is used to get the weather condition name based on the weather condition code. The format of the file is :
 Weather Condition Code, Weather Condition Name
+
+
+Assumptions Considered:
+-----------------------
+1. One file is generated per station. Hence the program is build to handle and process mutiple files in a directory assuming mutiple files will be present on any day to process
+2. As the processing of files is in sequential fashion, the data in out put file will also be in the same processing order
