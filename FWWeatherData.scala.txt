@@ -25,6 +25,7 @@ This program uses to functions defined in standalone OBJECT named LOOKUP
                                Example:- RAINY, SUNNY etc... PLease refer file Weather_Condition.txt file
    Function 2: stationlkp   :- This function takes STATION NUMBER and Master Loaction reference file as input parameters and emits its                      IATA and GEOCODE Informtion. Please refer file Master_Location.txt file for more information
 
+Run Command : scala FWWeatherData /home/cloudera/Desktop/CBAPROJECT/DATASETS /home/cloudera/Desktop/CBAPROJECT/OUTPUT/WEATHER_FORMATTED.txt /home/cloudera/Desktop/CBAPROJECT/REFFILES/Master_Location.txt /home/cloudera/Desktop/CBAPROJECT/REFFILES/Weather_Conditions.txt
 ----------------------------------------------------------------------------
 ---------------------------------------------------------------------------
 */  
